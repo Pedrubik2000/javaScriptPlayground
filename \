@@ -1,0 +1,12 @@
+#!/usr/bin/env node
+console.log('Hello world');
+let x = ['Hello'];
+let prototype = Object.getPrototypeOf(x);
+
+// Print the prototype as a string
+console.log(prototype.toString()); // Default toString method
+
+// Alternatively, for a more detailed view:
+console.log(JSON.stringify(prototype, null, 2)); // May fail for circular references
+console.log(prototype.constructor.name); // Prints the constructor name
+

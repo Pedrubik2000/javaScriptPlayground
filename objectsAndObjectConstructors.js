@@ -134,3 +134,18 @@ Object.setPrototypeOf(lazy, hamster);
 speedy.eat("apple");
 console.log(speedy.stomach);
 console.log(lazy.stomach);
+
+let car = {
+  brand: 'Honda',
+  getBrand: function() {
+    return this.brand;
+  }
+}
+
+let bike = {
+  brand: 'Harley Davidson'
+}
+
+
+let brand = car.getBrand.bind(bike);
+console.log(brand());
